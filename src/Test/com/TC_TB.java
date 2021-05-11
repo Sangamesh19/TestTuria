@@ -98,7 +98,6 @@ public class TC_TB extends Generic
 		Assert.assertTrue(d.findElement(By.xpath("//*[@id='email-app']/div/div[3]/ul/li[1]/section/div/div/div[3]")).isDisplayed());
 	  			
 	}
-
-//Adding in mster
+//BJBBH
 
 }
