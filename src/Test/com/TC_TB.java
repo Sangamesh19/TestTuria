@@ -135,7 +135,7 @@ public class TC_TB extends Generic
 
 // Below Test Case is added on 12-05-2021 at 12:51 PM by Mr. XXX
 //To check so and so functionality..
-//added now
+
    @Test
   public void testqq()
   {
