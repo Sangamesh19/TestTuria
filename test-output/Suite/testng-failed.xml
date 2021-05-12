@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="Test.com.TC_TB">
+        <methods>
+          <include name="appLogOut"/>
+          <include name="check_Navigating_to_Book_Item_Page"/>
+          <include name="to_Check_More_Option_isEnabled_First_Item"/>
+          <include name="to_Check_in_Inactive_Services"/>
+          <include name="to_More_Option_isDisplayed_First_Item"/>
+          <include name="validLogin"/>
+          <include name="to_Check_Check_Box_isClickable_First_Item"/>
+          <include name="to_Check_Mark_as_Inactive_isDisplyed_First_Item"/>
+          <include name="appLogin"/>
+          <include name="isList_isEmpty"/>
+          <include name="to_Check_Check_Box_isEnabled_First_Item"/>
+          <include name="to_Check_Check_Box_isSelected_First_Item"/>
+        </methods>
+      </class> <!-- Test.com.TC_TB -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

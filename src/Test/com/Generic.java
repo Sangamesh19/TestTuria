@@ -17,16 +17,25 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
 import java.util.*;  
 import java.io.*;  
 public class Generic {
 	
 	public WebDriver d;
 	String path="./Soft/Config.properties";
+	public ExtentReports extent;
+	public ExtentHtmlReporter reporter;
 	
 	@BeforeClass
 	public void appLogin() throws IOException, InterruptedException
 	{
+		reporter =new ExtentHtmlReporter("./R/testReport.html");
+		extent =new ExtentReports();
+		extent.attachReporter(reporter);
+		
 		Properties obj= new Properties();
 		FileInputStream objFile = new FileInputStream(path);
 		obj.load(objFile);
@@ -36,6 +45,10 @@ public class Generic {
 		WebDriverWait w=new WebDriverWait(d, 20);
 		w.until(ExpectedConditions.titleContains("Turia"));
 	
+		
+		
+		
+		
 // Code for Login
 		d.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		d.manage().window().maximize();
@@ -51,7 +64,9 @@ public class Generic {
 	{
 // Logout Scrip"t
 //		d.findElement(By.xpath("//*[@id='content-area']/div[2]/div[1]/div/header/div[2]/div[8]/div/div[2]/div")).click();
-		d.findElement(By.xpath("//span[text()=' Turia ']")).click();
+		
+	//	d.findElement(By.xpath("//span[text()=' Turia ']")).click();
+		d.findElement(By.xpath("(//span[@title='Turia' and @class='vs-avatar--text notranslate'])[2]")).click();
 		Thread.sleep(2000);
 		d.findElement(By.xpath("//i[text()='logout']")).click();
 		Thread.sleep(5000);
