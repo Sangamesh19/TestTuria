@@ -26,15 +26,15 @@ public class Generic {
 	
 	public WebDriver d;
 	String path="./Soft/Config.properties";
-	public ExtentReports extent;
-	public ExtentHtmlReporter reporter;
+//	public ExtentReports extent;
+//	public ExtentHtmlReporter reporter;
 	
 	@BeforeClass
 	public void appLogin() throws IOException, InterruptedException
 	{
-		reporter =new ExtentHtmlReporter("./R/testReport.html");
-		extent =new ExtentReports();
-		extent.attachReporter(reporter);
+//		reporter =new ExtentHtmlReporter("./R/testReport.html");
+//		extent =new ExtentReports();
+//		extent.attachReporter(reporter);
 		
 		Properties obj= new Properties();
 		FileInputStream objFile = new FileInputStream(path);
